@@ -88,11 +88,9 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.1-impl \
     audio.bluetooth.default \
     audio.primary.default \
-    audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
     audio.usbv2.default \
-    libaacwrapper \
     libaudiopreprocessing \
     libbatterylistener \
     libbundlewrapper \
@@ -148,11 +146,6 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
-# CNE
-PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne
-
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
@@ -170,9 +163,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     gralloc.kona \
-    hwcomposer.kona \
+    vendor.qti.hardware.display.composer-service \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
+    libdisplayconfig.system.qti \
     libqdMetaData \
     libqdMetaData.system \
     libtinyxml \
@@ -224,7 +217,7 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
 # HIDL
@@ -265,11 +258,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# IPv6
-PRODUCT_PACKAGES += \
-    ethertypes \
-    libebtc
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
@@ -277,10 +265,6 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
-
-# KProfiles
-PRODUCT_PACKAGES += \
-    KProfiles
     
 # Lights
 PRODUCT_PACKAGES += \
@@ -423,17 +407,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
-# RCS
-PRODUCT_PACKAGES += \
-    rcs_service_aidl \
-    rcs_service_aidl.xml \
-    rcs_service_api \
-    rcs_service_api.xml
-
-# Resolution Changer
-PRODUCT_PACKAGES += \
-    ResolutionChanger
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
@@ -492,10 +465,6 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.0.vendor
 
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
-
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.lge_kona
@@ -528,15 +497,12 @@ PRODUCT_PACKAGES += \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
-    TetheringConfigOverlay \
     vendor.qti.hardware.wifi.hostapd@1.0.vendor \
     vendor.qti.hardware.wifi.hostapd@1.1.vendor \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.0.vendor \
     vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
-    WifiOverlay \
-    WifiResCommon \
     wpa_supplicant \
     wpa_supplicant.conf
 
