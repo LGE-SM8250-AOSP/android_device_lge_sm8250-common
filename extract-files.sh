@@ -68,7 +68,7 @@ while [ "${#}" -gt 0 ]; do
 done
 
 if [ -z "$SRC" ]; then
-    SRC=/home/j0sh1x/extract/mount
+    SRC=/home/j0sh1x/los/mount
 fi
 
 # Initialize the helper
